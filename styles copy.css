@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     background-color: #ffffff;
+    background-image: url(/images/background.png);
   }
     
   nav {
@@ -42,7 +43,8 @@ body {
   img {
     max-width: 100%;
   }
-  button {
+  
+  #button {
     background:    #ffffff;
     border:        1px solid #000000;
     border-radius: 10px;
@@ -52,6 +54,26 @@ body {
     display:       inline-block;
     font:          normal bold 26px/1 "Open Sans", sans-serif;
     text-align:    center;
+  }
+
+  .button {
+    min-width: 130px;
+    height: 40px;
+    color: #161414;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #a5a2ac;
+    background: #eeedf1;
+  }
+  .button:hover {
+    background: #DEAB50;
+    color: #f3f2f7
   }
 
   footer {
