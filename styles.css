@@ -1,0 +1,63 @@
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+  }
+    
+  nav {
+    background-color: #deab50;
+    padding: 10px;
+    max-width: 50%;
+    min-height: auto;
+  }
+ .menu li{
+    display: inline;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+ }
+  .acceptance{
+    color: rgb(28, 131, 59);
+    display: block;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  a:hover {
+    color: #3b4df1;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+  
+  fieldset{
+    width: 30%;
+    height: auto;
+    display: inline;
+  }
+
+  img {
+    max-width: 100%;
+  }
+  
+  .button {
+    background:    #ffffff;
+    border:        1px solid #000000;
+    border-radius: 10px;
+    box-shadow:    0 1px #444444;
+    padding:       20px 45px;
+    color:         #deab50;
+    display:       inline-block;
+    font:          normal bold 26px/1 "Open Sans", sans-serif;
+    text-align:    center;
+  }
+
+  footer {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
