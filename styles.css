@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 
   nav {
     background-color: #deab50;
@@ -16,11 +19,7 @@
   /*background-color: #ffffff;*/
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='1440' preserveAspectRatio='none' viewBox='0 0 1440 1440'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1026%26quot%3b)' fill='none'%3e%3crect width='1440' height='1440' x='0' y='0' fill='rgba(222%2c 171%2c 80%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c592.496C109.396%2c586.612%2c190.271%2c497.943%2c287.221%2c446.925C395.377%2c390.009%2c546.224%2c383.624%2c602.791%2c275.285C659.234%2c167.182%2c579.514%2c39.881%2c562.823%2c-80.922C546.018%2c-202.549%2c572.598%2c-334.959%2c504.372%2c-437.041C433.227%2c-543.49%2c315.034%2c-623.079%2c188.301%2c-641.295C66.584%2c-658.79%2c-37.408%2c-563.74%2c-156.206%2c-531.99C-279.061%2c-499.156%2c-447.355%2c-555.159%2c-521.247%2c-451.663C-597.038%2c-345.507%2c-471.913%2c-199.552%2c-486.125%2c-69.894C-499.577%2c52.834%2c-638.982%2c156.969%2c-600.828%2c274.389C-563.254%2c390.022%2c-415.243%2c422.039%2c-307.79%2c478.93C-209.145%2c531.157%2c-111.457%2c598.491%2c0%2c592.496' fill='%23a5751f'%3e%3c/path%3e%3cpath d='M1440 2027.645C1557.139 2051.902 1683.1970000000001 2038.9679999999998 1788.705 1982.595 1898.364 1924.004 2001.6390000000001 1831.122 2032.991 1710.81 2063.369 1594.2359999999999 1965.5990000000002 1486.134 1949.1779999999999 1366.791 1932.6100000000001 1246.377 2010.6390000000001 1106.099 1936.53 1009.755 1862.848 913.965 1711.958 942.739 1596.226 907.943 1479.526 872.855 1371.855 775.923 1253.356 804.349 1134.3220000000001 832.903 1053.9180000000001 946.489 992.975 1052.651 938.73 1147.144 933.827 1257.841 930.5070000000001 1366.746 927.51 1465.076 930.9110000000001 1564.402 974.69 1652.5 1017.64 1738.93 1098.071 1794.564 1173.2060000000001 1855.1399999999999 1257.355 1922.983 1334.155 2005.7269999999999 1440 2027.645' fill='%23efd6a9'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1026'%3e%3crect width='1440' height='1440' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
 }
-  .acceptance{
-    color: rgb(122, 36, 20);
-    display: block;
-  }
-  
+
   a {
     text-decoration: none;
     color: #000000;
@@ -33,13 +32,16 @@
   p {
     margin-bottom: 10px;
   }
-  
-  fieldset{
-    width: 30%;
-    height: auto;
-    display: inline;
+
+  .contact{
+    font-size: large;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
   }
-  
+
   .button {
     background:    #ffffff;
     border:        1px solid #000000;
@@ -57,4 +59,99 @@
     padding: 20px;
     text-align: center;
   }
+
+
+  html,
+  body,
+  .carousel {
+    height: 100%;
+  }
   
+  .carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .carousel-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    width: 300%;
+    height: 100%
+    transition: 0.5s;
+  }
+  
+  .carousel img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  input {
+    display: none;
+  }
+  
+  input,
+  label {
+    position: relative;
+    z-index: 2;
+  }
+  
+  label {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.3;
+    backdrop-filter: blur(20px);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .dots {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(transparent, #000 90%);
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  
+  input:nth-child(1):checked ~ .dots label:nth-child(1),
+  input:nth-child(2):checked ~ .dots label:nth-child(2),
+  input:nth-child(3):checked ~ .dots label:nth-child(3) {
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 1;
+    backdrop-filter: none;
+  }
+  
+  input:nth-child(1):checked ~ .carousel-images {
+    translate: 0;
+  }
+  
+  input:nth-child(2):checked ~ .carousel-images {
+    translate: -100vw;
+  }
+  
+  input:nth-child(3):checked ~ .carousel-images {
+    translate: -200vw;
+  }
