@@ -2,18 +2,29 @@
   box-sizing: border-box;
 }
 
+.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#title{
+  text-align: center;
+  word-wrap: normal;
+}
+
+#mission{
+  text-align: center;
+  word-wrap: normal;
+}
+
   nav {
     background-color: #deab50;
     padding: 10px;
     max-width: 50%;
     min-height: auto;
   }
- .menu li{
-    display: inline;
-    list-style-type: none;
-    padding: 10px;
-    margin: 10px;
- }
+
  body {
   font-family: sans-serif;
   /*background-color: #ffffff;*/
@@ -33,25 +44,27 @@
     margin-bottom: 10px;
   }
 
+  #acceptance{
+    text-align: center;
+    word-wrap: normal;
+  }
+
+  li{
+    display: block;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+ }
+
   .contact{
     font-size: large;
     font-weight: bold;
     display: block;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    word-wrap: normal;
 
-  }
-
-  .button {
-    background:    #ffffff;
-    border:        1px solid #000000;
-    border-radius: 10px;
-    box-shadow:    0 1px #444444;
-    padding:       20px 45px;
-    color:         #deab50;
-    display:       inline-block;
-    font:          normal bold 26px/1 "Open Sans", sans-serif;
-    text-align:    center;
   }
 
   footer {
@@ -60,6 +73,7 @@
     text-align: center;
   }
 
+/*Picture Carousel*/
 
   html,
   body,
